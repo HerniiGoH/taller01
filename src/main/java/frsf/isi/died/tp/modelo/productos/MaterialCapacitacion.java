@@ -6,16 +6,60 @@
 package frsf.isi.died.tp.modelo.productos;
 
 import java.util.ArrayList;
+import java.util.*;
 
 import frsf.isi.died.tp.util.Ordenable;
 
 /**
  * Representa de manera abstracta los materiales de capacitación
  * 
- * @author mdominguez
+ * @author Albornoz Hernan, Moyano Guillermo, Tomas Emanuel 
+ * https://github.com/HerniiGoH/taller01
  */
 public abstract class MaterialCapacitacion {
 	protected Integer id;
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the titulo
+	 */
+	public String getTitulo() {
+		return titulo;
+	}
+
+	/**
+	 * @param titulo the titulo to set
+	 */
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	/**
+	 * @return the costo
+	 */
+	public Double getCosto() {
+		return costo;
+	}
+
+	/**
+	 * @param costo the costo to set
+	 */
+	public void setCosto(Double costo) {
+		this.costo = costo;
+	}
+
 	/**
 	 * Titulo del material
 	 */
@@ -82,6 +126,13 @@ public abstract class MaterialCapacitacion {
 	 * @return
 	 */
 	public abstract Boolean esVideo();
+	
+	public String toString() {
+		
+		String str = "Titulo: "+this.titulo+" ; Precio: "+this.precio();
+		
+		return str;
+	}
 	
 	//TODO 02: sobrescribir el metodo toString de la clase "Object"
 	//	el método toString retorna un string que representa el material actual

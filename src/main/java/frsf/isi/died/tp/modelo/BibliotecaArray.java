@@ -38,13 +38,23 @@ public class BibliotecaArray implements Biblioteca{
 	public void agregar(MaterialCapacitacion material) {
 		// TODO 06: se agrega un material al arreglo de materiales de capacitacion si hay espacio en el arreglo
 		// caso contrario el metodo no agrega ningun elemento y termina su ejecución
+		if(this.materialCapacitacion[this.materialCapacitacion.length-1] == null) {
+			int i = 0;
+			while(this.materialCapacitacion[i]!=null) {
+				i++;
+			}
+			this.materialCapacitacion[i]=material;	
+		}
 		
 	}
 
 	@Override
 	public Integer cantidadMateriales() {
-		// TODO 07: retorna la cantidad de materiales que hay ingresados en el sistema
-		return null;
+		Integer i = 0;
+		while(this.materialCapacitacion[i]!=null) {
+			i++;
+		}
+		return i;
 	}
 
 
